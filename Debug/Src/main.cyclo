@@ -1,4 +1,4 @@
 ../Src/main.c:33:5:main	1
-../Src/main.c:44:6:SysTick_Handler	1
-../Src/main.c:48:6:HAL_ADC_ConvCpltCallback	1
-../Src/main.c:62:6:resetAll	4
+../Src/main.c:47:6:SysTick_Handler	1
+../Src/main.c:51:6:HAL_ADC_ConvCpltCallback	1
+../Src/main.c:66:6:resetAll	4

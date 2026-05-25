@@ -36,6 +36,9 @@ int main(){
 	adc_start(0);
 
 	while(1){
+		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, 1);
+		//HAL_Delay(1000);
+
 		counter=count;
 	}
 
@@ -46,12 +49,13 @@ void SysTick_Handler(void){
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* adc_init){
+	adc_start(0);
 	value=adc_read();
-	count=value/341;
+	count=value/372;
+	count+=1;
 
-
-			//resetAll(count-1);
-			HAL_GPIO_WritePin(pins[count-1], ports[count-1], 1);
+			resetAll(count-1);
+			HAL_GPIO_WritePin(ports[count-1], pins[count-1], 1);
 
 
 	//HAL_ADC_Start_IT(&adc_init);
@@ -64,7 +68,7 @@ void resetAll(uint32_t skip){
 	for(uint32_t i=0; i<12; i++){
 		if(i==skip) continue;
 
-		HAL_GPIO_WritePin(pins[i], ports[i], 0);
+		HAL_GPIO_WritePin(ports[i], pins[i], 0);
 	} }
 
 }
