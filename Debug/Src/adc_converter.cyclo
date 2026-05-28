@@ -3,5 +3,6 @@ C:/STM32/External packages/ADC_Interrupt_Driver/Drivers/CMSIS/Include/core_cm4.h
 ../Src/adc_converter.c:12:10:adc_read	1
 ../Src/adc_converter.c:18:6:adc_start	1
 ../Src/adc_converter.c:24:6:adc_on	2
-../Src/adc_converter.c:90:6:ADC_IRQHandler	1
-../Src/adc_converter.c:95:6:GPIO_Init	1
+../Src/adc_converter.c:90:6:adc_off	1
+../Src/adc_converter.c:95:6:ADC_IRQHandler	1
+../Src/adc_converter.c:104:6:GPIO_Init	1
